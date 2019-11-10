@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Zaplanuj Jedzonko</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+<header class="app__header">
+    <h1 class="logo">
+        <span class="first_part">Zaplanuj</span>
+        <span class="second_part">Jedzonko.pl</span>
+    </h1>
+    <div class="user">
+        <h2>Imię</h2>
+    </div>
+</header>
+<main>
+    <aside class="menu">
+        <ul>
+            <li><a href="app.html">Pulpit</a></li>
+            <li><a href="recipes.html">Przepisy</a></li>
+            <li><a href="schedules.html">Plany</a></li>
+        </ul>
+    </aside>
+    <section class="app__content">
+        <div class="welcome">
+            <h2>
+                Witaj,
+            </h2>
+            <h3>wygląda na to, że jesteś tutaj<br> pierwszy raz!</h3>
+            <input type="text" placeholder="tutaj wpisz jak masz na imię">
+            <button type="submit">Gotowe!</button>
+            <p>Podaj nam swoje imię, a my zorganizujemy<br> dla Ciebie naszą aplikację :)</p>
+        </div>
+        <div class="desktop">
+            <div class="widget_recipe">
+                <i class="far fa-plus-square"></i>
+                <p>dodaj przepis</p>
+            </div>
+            <div class="widget_plan">
+                <i class="far fa-plus-square"></i>
+                <p>dodaj plan</p>
+            </div>
+            <div class="modals">
+                <div class="info">
+                    <i class="fas fa-info-circle"></i>
+                    <p>Masz już <span class="counter">0</span> przepisów, nieźle!</p>
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="warning">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p>Pamiętaj, aby dodać plan!</p>
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="success">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Świetnie, że jesteś! Udanego planowania i smacznego :)</p>
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="week">
+                <h3>Twój plan na <span class="week_nr"></span> tydzień: </h3>
+                <table>
+                    <tr>
+                        <th>Poniedziałek</th>
+                        <th>Wtorek</th>
+                        <th>Środa</th>
+                        <th>Czwartek</th>
+                        <th>Piątek</th>
+                        <th>Sobota</th>
+                        <th>Niedziela</th>
+                    </tr>
+                    <tr>
+                        <td>śniadanie</td>
+                        <td>śniadanie</td>
+                        <td>śniadanie</td>
+                        <td>śniadanie</td>
+                        <td>śniadanie</td>
+                        <td>śniadanie</td>
+                        <td>śniadanie</td>
+                    </tr>
+                    <tr>
+                        <td>drugie<br>śniadanie</td>
+                        <td>drugie<br>śniadanie</td>
+                        <td>drugie<br>śniadanie</td>
+                        <td>drugie<br>śniadanie</td>
+                        <td>drugie<br>śniadanie</td>
+                        <td>drugie<br>śniadanie</td>
+                        <td>drugie<br>śniadanie</td>
+                    </tr>
+                    <tr>
+                        <td>zupa</td>
+                        <td>zupa</td>
+                        <td>zupa</td>
+                        <td>zupa</td>
+                        <td>zupa</td>
+                        <td>zupa</td>
+                        <td>zupa</td>
+                    </tr>
+                    <tr>
+                        <td>drugie<br>danie</td>
+                        <td>drugie<br>danie</td>
+                        <td>drugie<br>danie</td>
+                        <td>drugie<br>danie</td>
+                        <td>drugie<br>danie</td>
+                        <td>drugie<br>danie</td>
+                        <td>drugie<br>danie</td>
+                    </tr>
+                    <tr>
+                        <td>kolacja</td>
+                        <td>kolacja</td>
+                        <td>kolacja</td>
+                        <td>kolacja</td>
+                        <td>kolacja</td>
+                        <td>kolacja</td>
+                        <td>kolacja</td>
+                    </tr>
+                </table>
+                <div class="buttons">
+                    <button class="weekplanbutton"><< poprzedni</button>
+                    <button class="weekplanbutton">następny >></button>
+                </div>
+            </div>
+        </div>
+        <div class="new_recipe">
+            <div class="my_recipe">
+                <p class="my_recipe_paragraph">NOWY PRZEPIS</p>
+                <div class="my_recipe_button"><button>Zapisz i zamknij</button></div>
+            </div>
+            <div class="recipe_name">
+                <label for="recipename">Nazwa przepisu</label>
+                <textarea id="recipename"></textarea>
+            </div>
+            <div class="recipe_description">
+                <label for="recipedescribtion">Opis przepisu</label>
+                <textarea id="recipedescribtion"></textarea>
+            </div>
+            <div class="instructions_igredients">
+                <div class="instructions">
+                    <div class="name"><p>INSTRUKCJE</p></div>
+                    <textarea id="instructionsInput"></textarea>
+                    <button id="instruction_button"><i class="fas fa-plus-square"></i></button>
+                    <div class="instruction_scroll">
+                        <ul class="list-instruction">
+                            <!--dodawane instrukcje-->
+                        </ul>
+                    </div>
+                </div>
+                <div class="ingredients">
+                    <div class="name"><p>SKŁADNIKI</p></div>
+                    <div class="ingredients_inner">
+                        <textarea id="ingredientsinput"></textarea>
+                        <button id="ingredients_button"><i class="fas fa-plus-square"></i></button>
+                    </div>
+                    <div class="igredients_scroll">
+                        <ul>
+                            <!--dodawane skladniki-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="new_plan">
+            <div class="my_plan">
+                <p class="my_plan_paragraph">NOWY PLAN</p>
+                <div class="my_plan_button"><button>Zapisz i zamknij</button></div>
+            </div>
+            <div class="plan_name">
+                <label for="planname">Nazwa planu</label>
+                <textarea id="planname"></textarea>
+            </div>
+            <div class="plan_description">
+                <label for="plandescribtion">Opis planu</label>
+                <textarea id="plandescribtion"></textarea>
+            </div>
+            <div class="plan_week">
+                <label for="week_number">Numer tygodnia</label>
+                <input type="number" id="week_number" name="week_number" min="1" max="52">
+            </div>
+            <div class="week_meal_plan">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>ŚNIADANIE</th>
+                        <th>DRUGIE ŚNIADANIE</th>
+                        <th>ZUPA</th>
+                        <th>DRUGIE DANIE</th>
+                        <th>KOLACJA</th>
+                    </tr>
+                    <tr>
+                        <th>PONIEDZIAŁEK</th>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>WTOREK</th>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>ŚRODA</th>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>CZWARTEK</th>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>PIĄTEK</th>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>SOBOTA</th>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>NIEDZIELA</th>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="nazwa">
+                                <option></option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="./js/app.js"></script>
+</body>
+</html>

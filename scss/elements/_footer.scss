@@ -1,0 +1,12 @@
+footer {
+  width: 100%;
+  text-align: center;
+  background-color: $headerColor;
+  p {
+    color: $bgdColor;
+    line-height: 3rem;
+    span {
+      color: $buttonsColor;
+    }
+  }
+}

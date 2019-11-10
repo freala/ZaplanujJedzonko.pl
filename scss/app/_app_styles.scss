@@ -1,0 +1,514 @@
+.app__header {
+  background-color: $headerColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 6.5rem;
+  padding: 0 3rem;
+  h1.logo {
+    font-family: $logoFont;
+    font-size: 3rem;
+    span.first_part {
+      color: $bgdColor;
+    }
+    span.second_part {
+      color: $buttonsColor;
+    }
+  }
+  div.user {
+    display: flex;
+    font-family: "Font Awesome 5 Free", sans-serif;
+    h2{
+      color: $bgdColor;
+      font-size: 2.5rem;
+      &:after {
+        content: "\f2bd";
+        color: $buttonsColor;
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+main{
+  display: flex;
+  aside.menu{
+    background-color: $navColor;
+    width: 16%;
+    min-width: 12rem;
+    height: 120vh;
+    margin: 0;
+    font-family: "Font Awesome 5 Free", sans-serif;
+    ul li{
+      padding: 2rem;
+      &:hover {
+        border-left: 0.3rem solid $buttonsColor;
+      }
+      a {
+        text-decoration: none;
+        color: $bgdColor;
+        font-size: 2rem;
+      }
+    }
+  }
+  section.app__content{
+    width: 100vw;
+    height: 120vh;
+    background-image: url("../images/image.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div.welcome{
+      width: 90%;
+      height: 90%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $headerColor;
+      background-color: $bgdColor;
+      border: 1px dashed $tableColor;
+      padding: 3rem 0;
+      h2{
+        font-size: 3rem;
+        padding: 2rem 0;
+      }
+      h3{
+        font-size: 2rem;
+        text-align: center;
+      }
+      input{
+        width: 20rem;
+        height: 2rem;
+        margin: 1.5rem 0;
+      }
+      button{
+        background-color: $buttonsColor;
+        border: none;
+        padding: 0.7rem 2rem;
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+      p{
+        padding: 2rem 0;
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: 500;
+      }
+    }
+    div.desktop{
+      width: 90%;
+      height: 90%;
+      background: transparent;
+      box-sizing: border-box;
+      font-family: "Font Awesome 5 Free", sans-serif;
+      div.widget_recipe, div.widget_plan{
+        background-color: $bgdColor;
+        float: left;
+        border: 1px dashed $successColor;
+        text-align: center;
+        padding: 2rem 1rem;
+        width: 15%;
+        min-width: 12rem;
+        margin-right: 2rem;
+        cursor: pointer;
+        i{
+          font-size: 5rem;
+          color: $successColor;
+          padding-bottom: 1.5rem;
+        }
+        p{
+          color: $successColor;
+          font-size: 2rem;
+        }
+      }
+      div.modals {
+        float: left;
+        display: flex;
+        flex-direction: column;
+        width: 46rem;
+        div.info, div.warning, div.success {
+          background-color: $bgdColor;
+          border: 1px dashed;
+          display: flex;
+          align-items: center;
+          position: relative;
+          padding: 0.7rem;
+          i.fa-info-circle, i.fa-exclamation-circle, i.fa-check-circle{
+            font-size: 2rem;
+          }
+          p{
+            font-size: 1.5rem;
+            padding: 0 0.7rem;
+          }
+          i.fa-times{
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+          }
+        }
+        div.info{
+          border-color: $infoColor;
+          margin-bottom: 1rem;
+          i{
+            color: $infoColor;
+          }
+          p{
+            color: $infoColor;
+          }
+        }
+        div.warning{
+          border-color: $warningColor;
+          margin-bottom: 1rem;
+          i{
+            color: $warningColor;
+          }
+          p{
+            color: $warningColor;
+          }
+        }
+        div.success{
+          border-color: $successColor;
+          i{
+            color: $successColor;
+          }
+          p{
+            color: $successColor;
+          }
+        }
+      }
+      div.clear{
+        clear: both;
+        height: 2rem;
+      }
+      div.week {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        color: $headerColor;
+        background-color: $bgdColor;
+        border: 1px dashed $tableColor;
+        h3 {
+          color: $buttonsColor;
+          font-size: 2rem;
+          padding: 2rem 0;
+        }
+        table {
+          width: 80%;
+          margin: 0 auto;
+          tr {
+            text-align: center;
+            color: $tableColor;
+            th {
+              font-size: 1.5rem;
+              color: $headerColor;
+              font-weight: 600;
+            }
+            th, td {
+              border-bottom: 1px solid $tableColor;
+              border-top: 1px solid $tableColor;
+              padding: 1rem;
+              text-align: start;
+              width: 13%;
+            }
+          }
+        }
+        div.buttons {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          button.weekplanbutton {
+            border: none;
+            color: $buttonsColor;
+            background-color: $bgdColor;
+            justify-content: space-between;
+            padding: 2rem 1rem;
+          }
+        }
+      }
+    }
+    div.new_recipe {
+      height: 90%;
+      width: 90%;
+      background-color: $bgdColor;
+      padding: 2rem 3rem;
+      box-sizing: border-box;
+      div.my_recipe{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid $tableColor;
+        p.my_recipe_paragraph{
+          color: $buttonsColor;
+          font-weight: 800;
+          font-size: 2rem;
+          padding-bottom: 0.5rem;
+        }
+        div.my_recipe_button {
+          padding-bottom: 0.6rem;
+          font-size: 1.5rem;
+          button {
+            border: none;
+            background-color: $buttonsColor;
+            color: $bgdColor;
+          }
+        }
+      }
+      div.recipe_name {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+        padding-right: 2rem;
+        label {
+          width: 20%;
+          padding-left: 0.5rem;
+          color: $navColor;
+          font-size: 1.75rem;
+        }
+        textarea#recipename{
+          width: 70%;
+          height: 2rem;
+        }
+      }
+      div.recipe_description {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 2rem;
+        padding-right: 2rem;
+        label {
+          width: 20%;
+          padding-left: 0.5rem;
+          color: $navColor;
+          font-size: 1.75rem;
+        }
+        textarea{
+          width: 70%;
+          height: 4rem;
+        }
+      }
+      div.instructions_igredients {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 3rem;
+        div.instructions {
+          width: 47%;
+          position: relative;
+          div.name {
+            color: $headerColor;
+            font-size: 1.75rem;
+            border-bottom: 2px solid $tableColor;
+            margin-bottom: 1rem;
+            p {
+              padding-bottom: 0.2rem;
+            }
+          }
+          textarea{
+            width: 77%;
+            height: 6rem;
+            float: left;
+            margin: 0 1rem;
+          }
+          button#instruction_button{
+            float: left;
+            border: none;
+            background-color: $bgdColor;
+            i {
+              font-size: 3rem;
+              color: $successColor;
+            }
+          }
+          div.instruction_scroll {
+            position: absolute;
+            top: 12rem;
+            height: 13rem;
+            width: 90%;
+            overflow-y: scroll;
+            border: 1px dashed $tableColor;
+            margin: 0 1rem;
+            ul{
+              list-style-position: inside;
+              list-style-type: decimal;
+              li{
+                padding: 0 1rem;
+                color: $tableColor;
+                i {
+                  cursor: pointer;
+                  color: $warningColor;
+                  padding-left: 2rem;
+                }
+                i.fa-trash-alt {
+                  color: $trashIconColor;
+                  padding-left: 0.5rem;
+                }
+              }
+            }
+          }
+        }
+        div.ingredients {
+          width: 47%;
+          position: relative;
+          div.name {
+            color: $headerColor;
+            font-size: 1.75rem;
+            border-bottom: 2px solid $tableColor;
+            margin-bottom: 1rem;
+            p {
+              padding-bottom: 0.2rem;
+            }
+          }
+          textarea{
+            width: 77%;
+            height: 3rem;
+            float: left;
+            margin: 0 1rem;
+          }
+          button#ingredients_button {
+            border: none;
+            float: left;
+            background-color: $bgdColor;
+            i {
+              font-size: 3rem;
+              color: $successColor;
+            }
+          }
+          div.igredients_scroll{
+            position: absolute;
+            top: 12rem;
+            height: 13rem;
+            width: 90%;
+            overflow-y: scroll;
+            border: 1px dashed $tableColor;
+            margin: 0 1rem;
+            ul{
+              list-style-position: inside;
+              list-style-type: disc;
+              li {
+                padding: 0 1rem;
+                color: $tableColor;
+                i {
+                  color: $warningColor;
+                  padding-left: 2rem;
+                  cursor: pointer;
+                }
+                i.fa-trash-alt {
+                  color: $trashIconColor;
+                  padding-left: 0.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    div.new_plan {
+      height: 90%;
+      width: 90%;
+      background-color: $bgdColor;
+      padding: 2rem 3rem;
+      box-sizing: border-box;
+      div.my_plan {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid $tableColor;
+        p.my_plan_paragraph {
+          color: $buttonsColor;
+          font-weight: 800;
+          font-size: 2rem;
+          padding-bottom: 0.5rem;
+        }
+        div.my_plan_button {
+          padding-bottom: 0.6rem;
+          font-size: 1.5rem;
+          button {
+            color: $bgdColor;
+            border: none;
+            background-color: $buttonsColor;
+          }
+        }
+      }
+      div.plan_name {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+        padding-right: 2rem;
+        label {
+          width: 20%;
+          padding-left: 0.5rem;
+          color: $navColor;
+          font-size: 1.75rem;
+        }
+        textarea#planname {
+          width: 70%;
+          height: 2rem;
+        }
+      }
+      div.plan_description {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 2rem;
+        padding-right: 2rem;
+        label {
+          width: 20%;
+          padding-left: 0.5rem;
+          color: $navColor;
+          font-size: 1.75rem;
+        }
+        textarea {
+          width: 70%;
+          height: 4rem;
+        }
+      }
+      div.plan_week {
+        display: flex;
+        padding-top: 2rem;
+        padding-right: 2rem;
+        label {
+          width: 20%;
+          padding-left: 0.5rem;
+          color: $navColor;
+          font-size: 1.75rem;
+        }
+        input {
+          margin-left: 5rem;
+          width: 3%;
+          height: 2rem;
+        }
+      }
+      div.week_meal_plan{
+        padding-top: 5rem;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        table {
+          width: 100%;
+          margin: 0 auto;
+          text-align: center;
+          tr {
+            text-align: center;
+            color: $headerColor;
+            border-top: 1px solid $tableColor;
+            th {
+              font-size: 1.5rem;
+              color: $navColor;
+              font-weight: 600;
+              border-top: 1px solid $bgdColor;
+              text-align: center;
+            }
+            th, td {
+              padding: 0.5rem 0;
+              text-align: center;
+              width: 16%;
+            }
+            select{
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

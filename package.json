@@ -1,0 +1,29 @@
+{
+  "name": "zaplanujjedzonko.pl",
+  "version": "1.0.0",
+  "description": "Front End Scrum Lab",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freala/ZaplanujJedzonko.pl.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/freala/ZaplanujJedzonko.pl/issues"
+  },
+  "homepage": "https://github.com/freala/ZaplanujJedzonko.pl#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "install": "^0.13.0",
+    "npm": "^6.13.0"
+  },
+  "devDependencies": {
+    "gulp-sass": "^4.0.2"
+  }
+}
