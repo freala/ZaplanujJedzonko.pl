@@ -1,5 +1,6 @@
 
-# ZaplanujJedzonko.pl
+# ZaplanujJedzonko.pl 
+(under construction)
 
 This project consists of landing page of ZaplanujJedzonko.pl and linked app that helps you storage your recipes and organize them into week schedules. 
 It came as a result of *Scrum Lab* I was a part of in **CodersLab**. Within 5 days me and my two colleagues created a rich draft for this repository.
