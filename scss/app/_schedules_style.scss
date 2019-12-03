@@ -1,0 +1,119 @@
+section.app__content {
+  div.schedules__all {
+    width: 90%;
+    height: 90%;
+    box-sizing: border-box;
+    padding: 2rem 3rem;
+    background-color: $bgdColor;
+    border: 1px dashed $tableColor;
+
+    .schedules__header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $navColor;
+
+      h3 {
+        color: $buttonsColor;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      button {
+        border: none;
+        background-color: $bgdColor;
+
+        i {
+          font-size: 2.5rem;
+          color: $successColor;
+        }
+      }
+    }
+
+    .schedules__list__content {
+      padding: 1rem;
+
+      .schedules__list__header {
+        display: flex;
+        border-top: 1px solid $tableColor;
+
+        h4 {
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: $navColor;
+          text-transform: uppercase;
+          padding: 0.5rem 0;
+        }
+
+        h4.schedules__id {
+          width: 6%;
+        }
+
+        h4.schedules__title {
+          width: 17.5%;
+        }
+
+        h4.schedules__description {
+          width: 54.5%;
+        }
+
+        h4.schedules__week {
+          width: 11%;
+        }
+
+        h4.schedules__actions {
+          width: 11%;
+        }
+      }
+
+      .schedules__list {
+        ul {
+          display: flex;
+
+          li {
+            color: $tableColor;
+            font-size: 1rem;
+            border-top: 1px solid $tableColor;
+            padding: 0.5rem 0;
+          }
+
+          li.schedule__id {
+            width: 6%;
+          }
+
+          li.schedule__title {
+            width: 17.5%;
+          }
+
+          li.schedule__description {
+            width: 54.5%;
+          }
+
+          li.schedule__week {
+            width: 11%;
+          }
+
+          li.schedule__actions {
+            width: 11%;
+            button {
+              border: none;
+              background-color: $bgdColor;
+
+              i {
+                font-size: 1.7rem;
+              }
+
+              i.fa-edit {
+                color: $warningColor;
+              }
+
+              i.fa-trash-alt {
+                color: $trashIconColor
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
